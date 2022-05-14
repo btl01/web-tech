@@ -1,0 +1,110 @@
+GET http://localhost:8080/users
+
+###
+GET http://localhost:8080/users/111111111
+
+###
+GET http://localhost:8080/users/phone/098589875
+
+###
+POST http://localhost:8080/users HTTP/1.1
+Content-type: application/json
+
+{
+  "ID": 855555555,
+  "hoVaTen": "Great Jame",
+  "tuoi": 25,
+  "canCuoc": "055153000257",
+  "lienHe": {
+    "dienThoai": "0985555555",
+    "email": "gj@gmail.com",
+    "diaChi": "UK"
+  },
+  "nguoiPhuThuoc": [
+    "023153000257",
+    "032153000257",
+    "023153000257"
+  ]
+}
+
+###
+
+PUT http://localhost:8080/users/855555555 HTTP/1.1
+Content-type: application/json
+
+{
+  "ID": 855555555,
+  "hoVaTen": "Great Jame",
+  "tuoi": 25,
+  "canCuoc": "055153000257",
+  "lienHe": {
+    "dienThoai": "0985555555",
+    "email": "gj@gmail.com",
+    "diaChi": "UK"
+  },
+  "nguoiPhuThuoc": [
+    "023153000257",
+    "032153000257",
+    "023153000257"
+  ]
+}
+
+###
+
+DELETE http://localhost:8080/users/1 HTTP/1.1
+
+###
+
+POST http://localhost:8080/users/many HTTP/1.1
+Content-type: application/json
+
+[
+  {
+    "ID": 858985698,
+    "hoVaTen": "Phạm Văn Tuấn",
+    "tuoi": 25,
+    "canCuoc": "037153000257",
+    "lienHe": {
+      "dienThoai": "098589875",
+      "email": "pvt@gmail.com",
+      "diaChi": "85 Hàng Bài, Hoàn Kiếm, Hà Nội"
+    },
+    "nguoiPhuThuoc": ["023153000257", "032153000257", "023153000257"]
+  },
+  {
+    "ID": 111111111,
+    "hoVaTen": "John Doe",
+    "tuoi": 22,
+    "canCuoc": "023153000257",
+    "lienHe": {
+      "dienThoai": "091111111",
+      "email": "jd@gmail.com",
+      "diaChi": "New York, US"
+    },
+    "nguoiPhuThuoc": ["037153000257", "032153000257", "023153000257"]
+  },
+  {
+    "ID": 222222222,
+    "hoVaTen": "David Moi",
+    "tuoi": 40,
+    "canCuoc": "032153000257",
+    "lienHe": {
+      "dienThoai": "092222222",
+      "email": "dm@gmail.com",
+      "diaChi": "LonDon, UK"
+    },
+    "nguoiPhuThuoc": ["037153000257", "023153000257"]
+  },
+  {
+    "ID": 333333333,
+    "hoVaTen": "Jackie Chan",
+    "tuoi": 55,
+    "canCuoc": "033153000257",
+    "lienHe": {
+      "dienThoai": "092222222",
+      "email": "dm@gmail.com",
+      "diaChi": "LonDon, UK"
+    },
+    "nguoiPhuThuoc": ["037153000257", "023153000257"]
+  }
+]
